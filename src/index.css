@@ -1,0 +1,318 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Background Colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+    
+    /* Surface Colors - Flat Design */
+    --surface: 0 0% 98%;
+    --surface-elevated: 0 0% 100%;
+    --surface-sunken: 0 0% 96%;
+    
+    /* Card Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    --card-border: 0 0% 90%;
+    
+    /* Primary - Black/Dark Gray */
+    --primary: 0 0% 20%;
+    --primary-foreground: 0 0% 100%;
+    --primary-muted: 0 0% 96%;
+    
+    /* Secondary - Slate */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 20%;
+    
+    /* Accent Colors */
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 10%;
+    --accent-muted: 0 0% 98%;
+    
+    /* Muted/Text Colors */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 55%;
+    --subtle: 0 0% 70%;
+    
+    /* Status Colors - Desaturated but vaguely colored for function */
+    --success: 145 10% 45%; /* Very desaturated green */
+    --success-foreground: 0 0% 100%;
+    --success-muted: 145 10% 96%;
+    
+    --warning: 38 20% 55%; /* Low sat orange/brown */
+    --warning-foreground: 0 0% 100%;
+    --warning-muted: 38 20% 96%;
+    
+    --destructive: 0 10% 45%; /* Low sat red */
+    --destructive-foreground: 0 0% 100%;
+    --destructive-muted: 0 10% 96%;
+    
+    --info: 0 0% 40%; /* Changed from Blue to Gray */
+    --info-foreground: 0 0% 100%;
+    --info-muted: 0 0% 96%;
+    
+    /* Border & Input */
+    --border: 0 0% 90%;
+    --input: 0 0% 92%;
+    --ring: 0 0% 80%;
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 97%; /* Slight contrast with white main area */
+    --sidebar-foreground: 0 0% 40%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-active: 0 0% 90%;
+    --sidebar-active-foreground: 0 0% 10%;
+    
+    /* Agent/Human Specific - Monochrome */
+    --agent: 0 0% 30%; /* Dark Gray */
+    --agent-foreground: 0 0% 100%;
+    --agent-muted: 0 0% 94%;
+    
+    --human: 0 0% 50%; /* Medium Gray */
+    --human-foreground: 0 0% 100%;
+    --human-muted: 0 0% 94%;
+    
+    /* Spacing Scale */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    
+    /* Border Radius */
+    --radius: 0.5rem;
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    
+    /* Typography */
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+    
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 200ms ease;
+    --transition-slow: 300ms ease;
+  }
+
+  .dark {
+    /* Core Background Colors */
+    --background: 220 10% 12%;
+    --foreground: 0 0% 90%;
+    
+    /* Surface Colors - Flat Design */
+    --surface: 220 10% 16%;
+    --surface-elevated: 220 10% 20%;
+    --surface-sunken: 220 10% 10%;
+    
+    /* Card Colors */
+    --card: 220 10% 16%;
+    --card-foreground: 0 0% 90%;
+    --card-border: 220 5% 25%;
+    
+    /* Primary - White/Light Gray */
+    --primary: 0 0% 90%;
+    --primary-foreground: 0 0% 10%;
+    --primary-muted: 0 0% 20%;
+    
+    /* Secondary - Slate */
+    --secondary: 220 5% 20%;
+    --secondary-foreground: 0 0% 90%;
+    
+    /* Accent Colors */
+    --accent: 220 5% 20%;
+    --accent-foreground: 0 0% 100%;
+    --accent-muted: 220 5% 15%;
+    
+    /* Muted/Text Colors */
+    --muted: 220 5% 20%;
+    --muted-foreground: 220 5% 60%;
+    --subtle: 220 5% 45%;
+    
+    /* Status Colors */
+    --success: 145 5% 50%;
+    --success-foreground: 0 0% 100%;
+    --success-muted: 145 5% 20%;
+    
+    --warning: 38 10% 60%;
+    --warning-foreground: 0 0% 10%;
+    --warning-muted: 38 10% 20%;
+    
+    --destructive: 0 20% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-muted: 0 10% 20%;
+    
+    --info: 0 0% 60%;
+    --info-foreground: 0 0% 100%;
+    --info-muted: 0 0% 20%;
+    
+    /* Border & Input */
+    --border: 220 5% 25%;
+    --input: 220 5% 20%;
+    --ring: 0 0% 40%;
+    
+    /* Sidebar */
+    --sidebar-background: 220 10% 14%;
+    --sidebar-foreground: 0 0% 80%;
+    --sidebar-border: 220 5% 20%;
+    --sidebar-active: 220 5% 25%;
+    --sidebar-active-foreground: 0 0% 100%;
+    
+    /* Agent/Human Specific */
+    --agent: 0 0% 70%;
+    --agent-foreground: 0 0% 10%;
+    --agent-muted: 0 0% 20%;
+    
+    --human: 0 0% 50%;
+    --human-foreground: 0 0% 100%;
+    --human-muted: 0 0% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    transition: background-color var(--transition-base), color var(--transition-base);
+  }
+}
+
+@layer components {
+  /* Flat Card - Zero Shadows */
+  .card-flat {
+    @apply bg-card border border-[hsl(var(--card-border))] rounded-lg;
+  }
+  
+  /* Surface Areas */
+  .surface {
+    @apply bg-[hsl(var(--surface))];
+  }
+  
+  .surface-elevated {
+    @apply bg-[hsl(var(--surface-elevated))];
+  }
+  
+  .surface-sunken {
+    @apply bg-[hsl(var(--surface-sunken))];
+  }
+  
+  /* Status Badges */
+  .badge-success {
+    @apply bg-[hsl(var(--success-muted))] text-[hsl(var(--success))] px-2 py-0.5 rounded text-xs font-medium;
+  }
+  
+  .badge-warning {
+    @apply bg-[hsl(var(--warning-muted))] text-[hsl(var(--warning))] px-2 py-0.5 rounded text-xs font-medium;
+  }
+  
+  .badge-destructive {
+    @apply bg-[hsl(var(--destructive-muted))] text-[hsl(var(--destructive))] px-2 py-0.5 rounded text-xs font-medium;
+  }
+  
+  .badge-info {
+    @apply bg-[hsl(var(--info-muted))] text-[hsl(var(--info))] px-2 py-0.5 rounded text-xs font-medium;
+  }
+  
+  .badge-agent {
+    @apply bg-[hsl(var(--agent-muted))] text-[hsl(var(--agent))] px-2 py-0.5 rounded text-xs font-medium;
+  }
+  
+  .badge-human {
+    @apply bg-[hsl(var(--human-muted))] text-[hsl(var(--human))] px-2 py-0.5 rounded text-xs font-medium;
+  }
+  
+  /* Button Variants - Flat */
+  .btn-primary {
+    @apply bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] px-4 py-2 rounded-lg font-medium 
+           hover:opacity-90 active:opacity-80 transition-opacity;
+  }
+  
+  .btn-secondary {
+    @apply bg-[hsl(var(--secondary))] text-[hsl(var(--secondary-foreground))] px-4 py-2 rounded-lg font-medium 
+           hover:bg-[hsl(var(--muted))] active:opacity-80 transition-all;
+  }
+  
+  .btn-ghost {
+    @apply text-[hsl(var(--foreground))] px-4 py-2 rounded-lg font-medium 
+           hover:bg-[hsl(var(--muted))] active:opacity-80 transition-all;
+  }
+  
+  /* Input Fields */
+  .input-flat {
+    @apply bg-[hsl(var(--input))] border border-[hsl(var(--border))] rounded-lg px-3 py-2 
+           focus:outline-none focus:ring-2 focus:ring-[hsl(var(--ring))] focus:border-transparent
+           placeholder:text-[hsl(var(--subtle))] transition-all;
+  }
+  
+  /* Divider */
+  .divider {
+    @apply h-px bg-[hsl(var(--border))] w-full;
+  }
+  
+  /* Scrollbar Styling */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--subtle)) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--subtle));
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+}
+
+@layer utilities {
+  /* Text Utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-8px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+}
